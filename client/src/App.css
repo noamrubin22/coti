@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(12, 85, 59);
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  /* text-align: center; */
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+}
+
+h1 {
+  color: rgba(255, 103, 87);
+  font-size: 6em;
+  padding: 12px;
+}
+
+h4 {
+  color: white;
+}
+
+.btn_landingpage {
+  padding: 0.7em;
+  margin: 0.7em;
+  width: 100px;
+  background-color: rgba(255, 103, 87);
+  color: black;
+  font-weight: bold;
+}
+
+.buttons {
+  margin: 1em;
+}
