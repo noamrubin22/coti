@@ -8,7 +8,7 @@ import Home from "./components/Home/Home";
 import Setup from "./components/registration/Setup/Setup";
 import Profile from "./components/registration/Profile/Profile";
 import Register from "./components/registration/Register/Register";
-import Loading from "./components/Loading/Loading";
+import Loading from "./components/registration/Loading/Loading";
 
 function App() {
   const [user, setUser] = useState("");

@@ -1,0 +1,35 @@
+h2 {
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 72px;
+  line-height: 98px;
+  color: #dddddd;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.subsct {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+}
+
+.register-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  align-items: center;
+  /* margin-right: 35rem; */
+  /* margin-left: 35rem; */
+}
+
+input {
+  width: 120px;
+}
+
+.btns {
+  /* margin-top: 11rem; */
+  align-items: center;
+}
