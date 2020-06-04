@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.login-section {
+  display: flex;
+  flex-direction: column;
+  background: pink;
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+
+.introduction {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-left: 8rem;
+  margin-right: 8rem;
+  margin-bottom: 0;
+  background: coral;
+}
+
+.introduction > h2 {
+  font-size: 72px;
+  line-height: 98px;
+  color: #dddddd;
+}
+.introduction > p {
+  width: 30rem;
+  text-align: center;
+  color: #dddddd;
+  padding: 2rem;
+}
+
+.whoareyou {
+  padding: 0.6rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  font-size: 72px;
+  line-height: 98px;
+  color: #dddddd;
+  text-align: center;
+  background: yellow;
+}
+
+.users {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 7rem;
+  margin-right: 7rem;
+  background: green;
+}
+
+.avatar {
+  display: flex;
+  flex-direction: column;
+}
+
+.avatar-img {
+  background: grey;
+  width: 176px;
+  height: 176px;
+  border: 0.2rem solid black;
+}
+
+.avatar-img:hover {
+  background: blue;
+  width: 176px;
+  height: 176px;
+  border: 0.2rem solid black;
+}
+
+.avatar-text {
+  background: white;
+  text-align: center;
+  width: 176px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}

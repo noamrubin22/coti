@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 1rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.login-btn {
+  padding: 0.3rem 1rem;
+  height: 50px;
+  background: #dddddd;
+  margin-right: 5rem;
+}
+
+h1 {
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 72px;
+  line-height: 98px;
+
+  color: #a7a4a4;
+}

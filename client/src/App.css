@@ -19,7 +19,8 @@ body {
 h1 {
   color: rgba(255, 103, 87);
   font-size: 6em;
-  padding: 12px;
+  padding: 0.24em;
+  animation: 3s infinite alternate slidein;
 }
 
 h4 {
@@ -35,6 +36,10 @@ h4 {
   font-weight: bold;
 }
 
+.btn_landingpage:hover {
+  background-color: rgb(243, 124, 111);
+}
+
 .buttons {
-  margin: 1em;
+  margin: 1.3em;
 }

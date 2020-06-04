@@ -1,0 +1,49 @@
+.setup {
+  display: flex;
+  flex-direction: column;
+}
+
+.avatar-img {
+  background: grey;
+  width: 176px;
+  height: 176px;
+  border: 0.2rem solid black;
+  margin: auto;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  margin: 8rem;
+}
+
+.setup-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.practice {
+  display: flex;
+  flex-direction: row;
+}
+.subcat {
+  display: flex;
+  flex-direction: column;
+}
+.native {
+  display: flex;
+  justify-content: space-between;
+}
+
+input {
+  margin: 0.3rem;
+}
+
+.btns {
+  text-align: center;
+}
+
+button {
+  margin: 0.3rem;
+  width: 4rem;
+}
