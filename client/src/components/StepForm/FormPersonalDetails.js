@@ -21,6 +21,20 @@ export class FormPersonalDetails extends Component {
       <MuiThemeProvider>
         <React.Fragment>
           <AppBar title="Enter Personal Details" />
+          <input
+            accept="image/*"
+            style={{ display: "none" }}
+            id="raised-button-file"
+            multiple
+            type="file"
+          />
+          <label htmlFor="raised-button-file">
+            <RaisedButton
+              primary={false}
+              label="Upload Image"
+              style={styles.button}
+            ></RaisedButton>
+          </label>
           <TextField
             hintText="Enter Your Name"
             floatingLabelText="Name"

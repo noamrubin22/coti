@@ -17,6 +17,7 @@ export class FormPersonalDetails extends Component {
 
   render() {
     const { values, handleChange } = this.props;
+
     return (
       <MuiThemeProvider>
         <React.Fragment>
@@ -28,6 +29,9 @@ export class FormPersonalDetails extends Component {
             defaultValue={values.email}
           />
           <TextField
+            // label="Password"
+            type="password"
+            autoComplete="current-password"
             hintText="Enter Your Password"
             floatingLabelText="Password"
             onChange={handleChange("password")}

@@ -3,11 +3,21 @@ import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import AppBar from "material-ui/AppBar";
 import { List, ListItem } from "material-ui/List";
 import RaisedButton from "material-ui/RaisedButton";
+import axios from "axios";
 
 export class FormUserDetails extends Component {
   continue = (e) => {
     e.preventDefault();
+
     // PROCESS FORM //
+    axios
+      .post("/auth/signup", this.props.values)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
     this.props.nextStep();
   };
 
@@ -29,6 +39,7 @@ export class FormUserDetails extends Component {
         bio,
         availability,
         email,
+        password,
       },
     } = this.props;
     return (
@@ -52,6 +63,7 @@ export class FormUserDetails extends Component {
             <ListItem primaryText="Bio" secondaryText={bio} />
             <ListItem primaryText="Availability" secondaryText={availability} />
             <ListItem primaryText="Email" secondaryText={email} />
+            <ListItem primaryText="Password" secondaryText={password} />
           </List>
           <br />
           <RaisedButton
