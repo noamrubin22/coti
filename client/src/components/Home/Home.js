@@ -29,7 +29,7 @@ function Home(props) {
             <div className="avatar">
               <div className="avatar-img"></div>
               <p className="avatar-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                YOUNGSTER ipsum dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
           </Link>
@@ -37,7 +37,7 @@ function Home(props) {
             <div className="avatar">
               <div className="avatar-img"></div>
               <p className="avatar-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                ELDER ipsum dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
           </Link>

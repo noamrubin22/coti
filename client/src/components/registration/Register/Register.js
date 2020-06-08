@@ -16,14 +16,22 @@ function Register() {
       <h2>Your profile is almost done</h2>
       <div className="subsct">
         <div className="register-section">
-          <input type="text" placeholder="email" name="email" ref={register} />
-          <input
-            type="password"
-            placeholder="password"
-            name="password"
-            ref={register}
-          />
-          <input type="submit" />
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <input
+              type="text"
+              placeholder="email"
+              name="email"
+              ref={register}
+            />
+            <input
+              type="password"
+              placeholder="password"
+              name="password"
+              ref={register({ required: true, minLength: 8 })}
+            />
+            <input type="submit" />
+            {errors.password && <p>Password is invalid</p>}
+          </form>
         </div>
         <div className="btns">
           <Link to="/setup/1">

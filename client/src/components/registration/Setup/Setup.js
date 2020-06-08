@@ -1,55 +1,66 @@
 import React from "react";
-import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { useForm, ErrorMessage } from "react-hook-form";
+import { Link, useHistory } from "react-router-dom";
+import { useStateMachine } from "little-state-machine";
 import Title from "../../Title/Title";
 import "./Setup.css";
+import updateAction from "../updateAction";
 
-export default function Setup() {
-  const { register, handleSubmit, errors } = useForm();
+export default function Setup(props) {
+  const { state, action } = useStateMachine(updateAction);
+  const { register, handleSubmit, errors } = useForm({
+    defaultValues: state.yourDetails,
+  });
+  const { push } = useHistory();
+  console.log("USER SETUP:", props.user);
 
   const onSubmit = (data) => {
-    console.log(data);
+    action(data);
+    // push("/setup/1");
   };
 
   return (
     <div className="setup">
       <Title />
       <div className="avatar-img"></div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <div className="setup-section">
           <div className="native">
             <div className="subcat">
-              <span>Native language</span>
+              <label>Native language</label>
               <input
                 type="text"
                 placeholder="Native language"
                 name="nativelanguage"
-                ref={register}
+                ref={register({ required: "This is required" })}
               />
+              <ErrorMessage errors={errors} name="nativelanguage" as="p" />
             </div>
-            <input type="submit" />
+            {/* <input type="submit" /> */}
           </div>
           <button>Add</button>
         </div>
         <div className="setup-section">
           <div className="practice">
             <div className="subcat">
-              <span>I want to practice..</span>
+              <label>I want to practice..</label>
               <input
                 type="text"
                 placeholder="I want to practice"
                 name="foreignlanguage"
-                ref={register}
+                ref={register({ required: "This is required" })}
               />
+              <ErrorMessage errors={errors} name="foreignlanguage" as="p" />
             </div>
             <div className="subcat">
-              <span>Level</span>
+              <label>Level</label>
               <input
                 type="text"
                 placeholder="level"
                 name="level"
-                ref={register}
+                ref={register({ required: "This is required" })}
               />
+              <ErrorMessage errors={errors} name="level" as="p" />
             </div>
             <input type="submit" />
           </div>

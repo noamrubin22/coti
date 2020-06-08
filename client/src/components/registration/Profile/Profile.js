@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 import Title from "../../Title/Title";
 import "./Profile.css";
 
-export default function Profile() {
+export default function Profile(props) {
   const { register, handleSubmit, errors } = useForm();
+  console.log("USER PROFILE:", props.user);
 
   const onSubmit = (data) => {
     console.log(data);
