@@ -24,6 +24,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        {/* <Route exact path="/auth" component={UserForm} /> /> */}
         <UserForm />
         {/* <Switch> */}
         {/* <Route exact path="/stepform" component={StepForm} /> */}

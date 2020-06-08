@@ -6,7 +6,7 @@ router.get("/", (req, res, next) => {
   res.render("index");
 });
 
-router.get("/setup", (req, res, next) => {
+router.get("/auth", (req, res, next) => {
   res.render;
 });
 

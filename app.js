@@ -83,7 +83,7 @@ app.use("/", index);
 const authRoutes = require("./routes/auth");
 app.use("/auth", authRoutes);
 
-const setupRoutes = require("./routes/setup");
-app.use("/setup", setupRoutes);
+// const setupRoutes = require("./routes/setup");
+// app.use("/setup", setupRoutes);
 
 module.exports = app;

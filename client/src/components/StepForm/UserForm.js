@@ -1,18 +1,24 @@
 import React, { Component } from "react";
 import FormUserDetails from "./FormUserDetails";
 import FormPersonalDetails from "./FormPersonalDetails";
+import FormRegistrationDetails from "./FormRegistrationDetails";
 import Confirm from "./Confirm";
 import Success from "./Success";
 
 export class UserForm extends Component {
   state = {
     step: 1,
-    firstName: "",
-    lastName: "",
-    email: "",
-    occupation: "",
-    city: "",
+    nativeLanguage: "",
+    foreignLanguage: "",
+    level: "",
+    name: "",
+    age: "",
+    country: "",
+    interests: "",
     bio: "",
+    availability: "",
+    email: "",
+    password: "",
   };
 
   // Proceed to next step
@@ -48,6 +54,8 @@ export class UserForm extends Component {
       interests,
       bio,
       availability,
+      email,
+      password,
     } = this.state;
     const values = {
       nativeLanguage,
@@ -59,6 +67,8 @@ export class UserForm extends Component {
       interests,
       bio,
       availability,
+      email,
+      password,
     };
 
     switch (step) {
@@ -81,13 +91,22 @@ export class UserForm extends Component {
         );
       case 3:
         return (
+          <FormRegistrationDetails
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        );
+      case 4:
+        return (
           <Confirm
             nextStep={this.nextStep}
             prevStep={this.prevStep}
             values={values}
           />
         );
-      case 4:
+      case 5:
         return <Success />;
     }
   }

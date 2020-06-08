@@ -28,6 +28,7 @@ export class FormUserDetails extends Component {
         interests,
         bio,
         availability,
+        email,
       },
     } = this.props;
     return (
@@ -50,6 +51,7 @@ export class FormUserDetails extends Component {
             <ListItem primaryText="Interests" secondaryText={interests} />
             <ListItem primaryText="Bio" secondaryText={bio} />
             <ListItem primaryText="Availability" secondaryText={availability} />
+            <ListItem primaryText="Email" secondaryText={email} />
           </List>
           <br />
           <RaisedButton
