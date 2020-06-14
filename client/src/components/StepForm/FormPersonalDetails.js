@@ -1,103 +1,45 @@
-import React, { Component } from "react";
-import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-import AppBar from "material-ui/AppBar";
-import TextField from "material-ui/TextField";
-import RaisedButton from "material-ui/RaisedButton";
+import React from "react";
+import ItemForm from "./ItemForm";
 
-export class FormPersonalDetails extends Component {
-  continue = (e) => {
-    e.preventDefault();
-    this.props.nextStep();
-  };
+const FormPersonalDetails = ({ setForm, formData, navigation }) => {
+  const { name, age, country, interests, bio, availability } = formData;
 
-  back = (e) => {
-    e.preventDefault();
-    this.props.prevStep();
-  };
+  const { next, previous } = navigation;
 
-  render() {
-    const { values, handleChange } = this.props;
-    return (
-      <MuiThemeProvider>
-        <React.Fragment>
-          <AppBar title="Enter Personal Details" />
-          <input
-            accept="image/*"
-            style={{ display: "none" }}
-            id="raised-button-file"
-            multiple
-            type="file"
-          />
-          <label htmlFor="raised-button-file">
-            <RaisedButton
-              primary={false}
-              label="Upload Image"
-              style={styles.button}
-            ></RaisedButton>
-          </label>
-          <TextField
-            hintText="Enter Your Name"
-            floatingLabelText="Name"
-            onChange={handleChange("name")}
-            defaultValue={values.name}
-          />
-          <TextField
-            hintText="Enter Your Age"
-            floatingLabelText="Age"
-            onChange={handleChange("age")}
-            defaultValue={values.age}
-          />
-          <br />
-          <TextField
-            hintText="Enter Your Country"
-            floatingLabelText="Country"
-            onChange={handleChange("country")}
-            defaultValue={values.country}
-          />
-          <br />
-          <TextField
-            hintText="Enter Your Interests"
-            floatingLabelText="Interests"
-            onChange={handleChange("interests")}
-            defaultValue={values.interests}
-          />
-          <br />
-          <TextField
-            hintText="Enter Your Bio"
-            floatingLabelText="Say Hi!"
-            onChange={handleChange("bio")}
-            defaultValue={values.bio}
-          />
-          <br />
-          <TextField
-            hintText="Enter Your Availability"
-            floatingLabelText="Availability"
-            onChange={handleChange("availability")}
-            defaultValue={values.availability}
-          />
-          <br />{" "}
-          <RaisedButton
-            label="Continue"
-            primary={true}
-            style={styles.button}
-            onClick={this.continue}
-          />
-          <RaisedButton
-            label="Back"
-            primary={false}
-            style={styles.button}
-            onClick={this.back}
-          />
-        </React.Fragment>
-      </MuiThemeProvider>
-    );
-  }
-}
-
-const styles = {
-  button: {
-    margin: 15,
-  },
+  return (
+    <div className="form">
+      <ItemForm
+        label="First Name"
+        name="name"
+        value={name}
+        onChange={setForm}
+      />
+      <ItemForm label="Age" name="age" value={age} onChange={setForm} />
+      <ItemForm
+        label="Country"
+        name="country"
+        value={country}
+        onChange={setForm}
+      />
+      <ItemForm
+        label="Interests"
+        name="interests"
+        value={interests}
+        onChange={setForm}
+      />
+      <ItemForm label="Bio" name="bio" value={bio} onChange={setForm} />
+      <ItemForm
+        label="Availability"
+        name="availability"
+        value={availability}
+        onChange={setForm}
+      />
+      <div>
+        <button onClick={previous}>Previous</button>
+        <button onClick={next}>Next</button>
+      </div>
+    </div>
+  );
 };
 
 export default FormPersonalDetails;

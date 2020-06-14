@@ -43,3 +43,9 @@ h4 {
 .buttons {
   margin: 1.3em;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}

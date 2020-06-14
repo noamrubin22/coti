@@ -18,12 +18,6 @@ function Home(props) {
           </p>
         </div>
         <h2 className="whoareyou">WHO ARE YOU?</h2>
-        {/* <Link to="/setup">
-          <button onClick={props.chooseElder}>Elder</button>
-        </Link>
-        <Link to="/setup">
-          <button onClick={props.chooseYoungster}>Youngster</button>
-        </Link> */}
         <div className="users">
           <Link to="/setup" onClick={props.chooseYoungster}>
             <div className="avatar">

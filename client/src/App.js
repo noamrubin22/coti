@@ -24,30 +24,10 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        {/* <Route exact path="/auth" component={UserForm} /> /> */}
-        <UserForm />
-        {/* <Switch> */}
-        {/* <Route exact path="/stepform" component={StepForm} /> */}
-        {/* <Route
-            exact
-            path="/"
-            render={() => (
-              <Home
-                chooseElder={chooseElder}
-                chooseYoungster={chooseYoungster}
-                user={user}
-              />
-            )}
-          />
-          <Route exact path="/setup" render={() => <Setup user={user} />} />
-          <Route exact path="/setup/1" render={() => <Profile user={user} />} />
-          <Route
-            exact
-            path="/setup/2"
-            render={() => <Register user={user} />}
-          />
-          <Route exact path="/setup/3" render={() => <Loading user={user} />} />
-        </Switch> */}
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/setup" component={UserForm} />
+        </Switch>
       </BrowserRouter>
     </div>
   );
